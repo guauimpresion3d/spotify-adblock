@@ -2,11 +2,12 @@
   "name": "spotify-adblock-macos",
   "version": "1.1.0",
   "description": "This project uses a proxy to strip all ad-related requests from the Spotify desktop application.",
-  "main": "index.js",
+  "main": "dist/mitm.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node mitm.js",
-    "start-old": "node filter-domains.js",
+    "start": "ts-node --transpile-only ./src/mitm.ts",
+    "build": "tsc -p .",
+    "start:compiled": "node dist/mitm.js",
     "docker-mitm": "docker build -t spotify-adblock . -f Dockerfile.mitm"
   },
   "repository": {
@@ -20,10 +21,15 @@
   },
   "homepage": "https://github.com/AnanthVivekanand/spotify-adblock#readme",
   "dependencies": {
-    "chalk": "^4.0.0",
     "colors": "^1.4.0",
     "http-mitm-proxy": "^0.8.2",
-    "http-proxy": "^1.18.0",
     "micromatch": "^4.0.2"
+  },
+  "devDependencies": {
+    "@types/colors": "^1.2.2",
+    "@types/micromatch": "^4.0.3",
+    "@types/node": "^20.10.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.4.0"
   }
 }
