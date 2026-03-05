@@ -8,6 +8,7 @@ const whitelist: string[] = [
   'audio-fa.scdn.co', // audio
   'audio4-fa.scdn.co', // audio
   'charts-images.scdn.co', // charts images
+  'canvaz.scdn.co', // canvas animations (FIX)
   'daily-mix.scdn.co', // daily mix images
   'dailymix-images.scdn.co', // daily mix images
   'heads-fa.scdn.co', // audio (heads)
@@ -47,12 +48,14 @@ const whitelist: string[] = [
   'clienttoken.spotify.com', // login
   '*dealer.spotify.com', // websocket connections
   "gue1-dealer.g2.spotify.com", // not sure what this is, but needed for search
+  "guc3-dealer.g2.spotify.com", // dealer región G2 América Latina (FIX)
   'image-upload*.spotify.com', // image uploading
   'login*.spotify.com', // login
   '*-spclient.spotify.com', // client APIs
   'spclient.wg.spotify.com', // client APIs, ads/tracking (blocked in blacklist)
   'audio-fa.spotifycdn.com', // audio
   'seed-mix-image.spotifycdn.com', // mix images
+  'pickasso.spotifycdn.com', // album/artist visual content (FIX)
   'download.ted.com', // podcasts
   'dcs*.megaphone.fm', // podcasts
   'traffic.megaphone.fm', // podcasts
@@ -66,4 +69,4 @@ const whitelist: string[] = [
   'dovetail-cdn.prxu.org', // podcasts
 ];
 
-export default whitelist; 
+export default whitelist;
