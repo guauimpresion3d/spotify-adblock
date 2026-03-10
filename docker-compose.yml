@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  spotify-adblock:
+    build:
+      context: .
+      dockerfile: Dockerfile.mitm
+    image: spotify-adblock:latest
+    container_name: spotify-adblock
+    restart: always
+    ports:
+      - "8082:8082"
+    volumes:
+      - ./certs:/usr/src/app/certs
