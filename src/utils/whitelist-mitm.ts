@@ -54,6 +54,8 @@ const whitelist: string[] = [
   '*-spclient.spotify.com', // client APIs
   'spclient.wg.spotify.com', // client APIs, ads/tracking (blocked in blacklist)
   'audio-fa.spotifycdn.com', // audio
+  'video-cf.spotifycdn.com', // video/audio (FIX)
+  'heads-fa-tls13.spotifycdn.com', // audio heads (FIX)
   'seed-mix-image.spotifycdn.com', // mix images
   'pickasso.spotifycdn.com', // album/artist visual content (FIX)
   'download.ted.com', // podcasts
